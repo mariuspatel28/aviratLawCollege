@@ -37,11 +37,11 @@ const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build'
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://localhost:3001',
-  'https://avirat-law-college-black.vercel.app',
+  'https://aviratlawcollege.education',       // 👈 Add this
+  'https://www.aviratlawcollege.education',   // 👈 Add this
+  'https://avirat-law-college-black.vercel.app', // Keep the old one just in case
   process.env.NEXT_PUBLIC_SERVER_URL,
   process.env.PAYLOAD_PUBLIC_SERVER_URL,
-  process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
 ].filter(Boolean) as string[]
 
 const poolConfig = isBuildPhase
